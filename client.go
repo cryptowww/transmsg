@@ -76,6 +76,9 @@ func main() {
 
 		url := "http://localhost:8082/msg"
 		request, err := http.NewRequest("POST", url, reader)
+		// method2
+		// request, err := http.Post(url, "application/json;charset=UTF-8", bytes.NewBuff([]bytes(byteData)))
+
 		defer request.Body.Close()
 
 		if err != nil {
